@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DDD",
+    "DAD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:dirt"
+    },
+    "A": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "result": {
+    "item": "mulch_mod:blue_mulch",
+    "count": 8
+  }
+}
