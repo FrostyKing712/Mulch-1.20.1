@@ -2,7 +2,6 @@ package frostyking712.mulch_mod;
 
 import com.mojang.logging.LogUtils;
 import frostyking712.mulch_mod.block.ModBlocks;
-import frostyking712.mulch_mod.item.ModCreativeModTabs;
 import frostyking712.mulch_mod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

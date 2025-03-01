@@ -1,7 +1,7 @@
-package frostyking712.mulch_mod.item;
+package frostyking712.mulch_mod;
 
-import frostyking712.mulch_mod.MulchMod;
 import frostyking712.mulch_mod.block.ModBlocks;
+import frostyking712.mulch_mod.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,7 +18,6 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BROWN_MULCH.get()))
                     .title(Component.translatable("creativetab.mulch_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                       pOutput.accept(ModItems.Wither_Dust.get());
 
                        pOutput.accept(ModBlocks.BROWN_MULCH.get());
                        pOutput.accept(ModBlocks.AMBER_MULCH.get());

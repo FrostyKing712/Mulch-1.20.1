@@ -11,9 +11,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MulchMod.MOD_ID);
 
-    public static final RegistryObject<Item> Wither_Dust = ITEMS.register("wither_dust",
-            () -> new Item(new Item.Properties()));
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
