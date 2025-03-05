@@ -18,7 +18,6 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BROWN_MULCH.get()))
                     .title(Component.translatable("creativetab.mulch_tab"))
                     .displayItems((pParameters, pOutput) -> {
-
                        pOutput.accept(ModBlocks.BROWN_MULCH.get());
                        pOutput.accept(ModBlocks.AMBER_MULCH.get());
                        pOutput.accept(ModBlocks.BLACK_MULCH.get());

@@ -19,7 +19,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, MulchMod.MOD_ID);
 
     public static final RegistryObject<Block> BROWN_MULCH = registerBlock("brown_mulch",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> AMBER_MULCH = registerBlock("amber_mulch",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
@@ -51,4 +51,5 @@ public class ModBlocks {
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
+
 }
