@@ -73,10 +73,10 @@ versionRange="${terrablender_version_range}"
 ordering="NONE"
 side="BOTH"
 [[dependencies.${mod_id}]]
-modId="custom_portal_api"
+modId="customportalapi"
 mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="${custom_portal_api_version_range}"
+versionRange="${customportalapi_version_range}"
 ordering="NONE"
 side="BOTH"
 
