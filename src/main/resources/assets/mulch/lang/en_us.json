@@ -1,0 +1,14 @@
+{
+  "block.mulch.brown_mulch": "Brown Mulch",
+  "block.mulch.amber_mulch": "Amber Mulch",
+  "block.mulch.black_mulch": "Black Mulch",
+  "block.mulch.blue_mulch": "Blue Mulch",
+  "block.mulch.red_mulch": "Red Mulch",
+  "block.mulch.ruby_mulch": "Ruby Mulch",
+  "block.mulch.yellow_mulch": "Yellow Mulch",
+  "block.mulch.portal_core_mulch": "Mulch Portal Core",
+
+  "item.mulch.mulch_portal_lighter": "Mulch Portal Lighter",
+
+  "creativetab.mulch_tab": "Mulch"
+}

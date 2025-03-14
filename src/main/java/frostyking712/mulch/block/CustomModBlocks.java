@@ -1,6 +1,5 @@
-package frostyking712.mulch_mod.block;
+package frostyking712.mulch.block;
 
-import frostyking712.mulch_mod.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -15,9 +14,6 @@ public class CustomModBlocks extends Block {
 
     @Override
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
-        Block plant = plantable.getPlant(world, pos.relative(facing)).getBlock();
-        BlockState above = world.getBlockState(pos.above());
-            return true;
+        return true;
     }
 }
-

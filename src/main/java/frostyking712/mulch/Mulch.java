@@ -1,11 +1,14 @@
-package frostyking712.mulch_mod;
+package frostyking712.mulch;
 
 import com.mojang.logging.LogUtils;
-import frostyking712.mulch_mod.block.ModBlocks;
-import frostyking712.mulch_mod.item.ModItems;
+import frostyking712.mulch.block.ModBlocks;
+import frostyking712.mulch.item.ModItems;
+import frostyking712.mulch.worldgen.surface.ModSurfaceRules;
+import frostyking712.mulch.worldgen.portal.ModPortal;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,17 +17,26 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.util.thread.SidedThreadGroups;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
+
+import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(MulchMod.MOD_ID)
-public class MulchMod {
+@Mod(Mulch.MOD_ID)
+public class Mulch {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "mulch_mod";
+    public static final String MOD_ID = "mulch";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+    private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue();
 
-    public MulchMod(FMLJavaModLoadingContext context) {
+    public Mulch(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
@@ -42,17 +54,19 @@ public class MulchMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.dimRules());
+           ModPortal.registerPortals();
+        });
     }
-
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        }
+    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

@@ -1,7 +1,7 @@
-package frostyking712.mulch_mod;
+package frostyking712.mulch;
 
-import frostyking712.mulch_mod.block.ModBlocks;
-import frostyking712.mulch_mod.item.ModItems;
+import frostyking712.mulch.block.ModBlocks;
+import frostyking712.mulch.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -12,9 +12,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MulchMod.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Mulch.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> MULCH_MOD = CREATIVE_MODE_TABS.register("mulch_tab",
+    public static final RegistryObject<CreativeModeTab> MULCH = CREATIVE_MODE_TABS.register("mulch_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BROWN_MULCH.get()))
                     .title(Component.translatable("creativetab.mulch_tab"))
                     .displayItems((pParameters, pOutput) -> {
@@ -25,7 +25,9 @@ public class ModCreativeModTabs {
                        pOutput.accept(ModBlocks.RED_MULCH.get());
                        pOutput.accept(ModBlocks.RUBY_MULCH.get());
                        pOutput.accept(ModBlocks.YELLOW_MULCH.get());
+                       pOutput.accept(ModBlocks.PORTAL_CORE_MULCH.get());
 
+                       pOutput.accept(ModItems.MULCH_PORTAL_LIGHTER.get());
                     })
                     .build());
 

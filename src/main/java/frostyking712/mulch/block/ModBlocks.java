@@ -1,7 +1,7 @@
-package frostyking712.mulch_mod.block;
+package frostyking712.mulch.block;
 
-import frostyking712.mulch_mod.item.ModItems;
-import frostyking712.mulch_mod.MulchMod;
+import frostyking712.mulch.Mulch;
+import frostyking712.mulch.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -16,28 +16,31 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, MulchMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, Mulch.MOD_ID);
 
     public static final RegistryObject<Block> BROWN_MULCH = registerBlock("brown_mulch",
             () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> AMBER_MULCH = registerBlock("amber_mulch",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> BLACK_MULCH = registerBlock("black_mulch",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> BLUE_MULCH = registerBlock("blue_mulch",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> RED_MULCH = registerBlock("red_mulch",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> RUBY_MULCH = registerBlock("ruby_mulch",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> YELLOW_MULCH = registerBlock("yellow_mulch",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
+
+    public static final RegistryObject<Block> PORTAL_CORE_MULCH = registerBlock("portal_core_mulch",
+            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
