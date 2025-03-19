@@ -19,15 +19,22 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.mulch_tab"))
                     .displayItems((pParameters, pOutput) -> {
                        pOutput.accept(ModBlocks.BROWN_MULCH.get());
+                       pOutput.accept(ModBlocks.YELLOW_MULCH.get());
                        pOutput.accept(ModBlocks.AMBER_MULCH.get());
+                       pOutput.accept(ModBlocks.RUBY_MULCH.get());
+                       pOutput.accept(ModBlocks.RED_MULCH.get());
                        pOutput.accept(ModBlocks.BLACK_MULCH.get());
                        pOutput.accept(ModBlocks.BLUE_MULCH.get());
-                       pOutput.accept(ModBlocks.RED_MULCH.get());
-                       pOutput.accept(ModBlocks.RUBY_MULCH.get());
-                       pOutput.accept(ModBlocks.YELLOW_MULCH.get());
                        pOutput.accept(ModBlocks.PORTAL_CORE_MULCH.get());
 
                        pOutput.accept(ModItems.MULCH_PORTAL_LIGHTER.get());
+                       pOutput.accept(ModItems.BROWN_MULCH_FERTILISER.get());
+                       pOutput.accept(ModItems.YELLOW_MULCH_FERTILISER.get());
+                       pOutput.accept(ModItems.AMBER_MULCH_FERTILISER.get());
+                       pOutput.accept(ModItems.RUBY_MULCH_FERTILISER.get());
+                       pOutput.accept(ModItems.RED_MULCH_FERTILISER.get());
+                       pOutput.accept(ModItems.BLACK_MULCH_FERTILISER.get());
+                       pOutput.accept(ModItems.BLUE_MULCH_FERTILISER.get());
                     })
                     .build());
 

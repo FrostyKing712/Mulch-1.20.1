@@ -18,6 +18,14 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.MULCH_PORTAL_LIGHTER);
+
+        simpleItem(ModItems.BROWN_MULCH_FERTILISER);
+        simpleItem(ModItems.YELLOW_MULCH_FERTILISER);
+        simpleItem(ModItems.AMBER_MULCH_FERTILISER);
+        simpleItem(ModItems.RUBY_MULCH_FERTILISER);
+        simpleItem(ModItems.RED_MULCH_FERTILISER);
+        simpleItem(ModItems.BLACK_MULCH_FERTILISER);
+        simpleItem(ModItems.BLUE_MULCH_FERTILISER);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

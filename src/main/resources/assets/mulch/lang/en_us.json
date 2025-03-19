@@ -10,5 +10,13 @@
 
   "item.mulch.mulch_portal_lighter": "Mulch Portal Lighter",
 
+  "item.mulch.brown_mulch_fertiliser": "Brown Mulch Fertiliser",
+  "item.mulch.yellow_mulch_fertiliser": "Yellow Mulch Fertiliser",
+  "item.mulch.amber_mulch_fertiliser": "Amber Mulch Fertiliser",
+  "item.mulch.ruby_mulch_fertiliser": "Ruby Mulch Fertiliser",
+  "item.mulch.red_mulch_fertiliser": "Red Mulch Fertiliser",
+  "item.mulch.black_mulch_fertiliser": "Black Mulch Fertiliser",
+  "item.mulch.blue_mulch_fertiliser": "Blue Mulch Fertiliser",
+
   "creativetab.mulch_tab": "Mulch"
 }
