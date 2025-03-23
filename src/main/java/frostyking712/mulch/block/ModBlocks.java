@@ -40,7 +40,7 @@ public class ModBlocks {
             () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     public static final RegistryObject<Block> PORTAL_CORE_MULCH = registerBlock("portal_core_mulch",
-            () -> new CustomModBlocks(BlockBehaviour.Properties.copy(Blocks.DIRT).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
